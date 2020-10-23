@@ -5,12 +5,14 @@ export const Business = ({business}) => {
     return (
         <div className="Business">
             <div className="image-container">
-                <img src={business.imageSrc} alt=''/>
+                <a href={business.url} target="_blank">
+                    <img src={business.imageSrc} alt='business'/>
+                </a>
             </div>
             <h2>{business.name}</h2>
             <div className="Business-information">
                 <div className="Business-address">
-                <p>{business.address}</p>
+                <a style={{ color: 'black', textDecoration: 'none' }}href={'http://maps.google.com/?q='+ business.address}>{business.address}</a>
                 <p>{business.city}</p>
                 <p>{business.city} {business.zipCode}</p>
                 </div>
